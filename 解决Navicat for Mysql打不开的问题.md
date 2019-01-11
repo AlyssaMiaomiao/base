@@ -4,7 +4,7 @@
 
 
 
-![avatar](f:\帖子图片\数据库打不开.jpg)
+![](https://github.com/AlyssaMiaomiao/base/blob/master/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%89%93%E4%B8%8D%E5%BC%80.jpg?raw=true)
 
 
 
