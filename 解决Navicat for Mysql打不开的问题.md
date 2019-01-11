@@ -37,11 +37,11 @@
 
   ​
 
-  ![avatar](f:/帖子图片/a.jpg)
+  ![](https://github.com/AlyssaMiaomiao/base/blob/master/a.jpg?raw=true)
 
   ​
 
-  ![avatar](F:/帖子图片/b.jpg)
+  ![](https://github.com/AlyssaMiaomiao/base/blob/master/b.jpg?raw=true)
 
   ​
 
@@ -49,7 +49,7 @@
 
   ​
 
-  ![avatar](f:/帖子图片/c.jpg)
+  ![](https://github.com/AlyssaMiaomiao/base/blob/master/c.jpg?raw=true)
 
   ​
 
