@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <display-name>votingSystem</display-name>
+  <filter>
+    <filter-name>encodeFilter</filter-name>
+    <filter-class>UI.filter.EncodeFilter</filter-class>
+    <init-param>
+      <param-name>encode</param-name>
+      <param-value>UTF-8</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>encodeFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>exceptionFilter</filter-name>
+    <filter-class>UI.filter.ExceptionFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>exceptionFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>autoLoginFilter</filter-name>
+    <filter-class>UI.filter.AutoLoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>autoLoginFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>AffairFilter</filter-name>
+    <filter-class>UI.filter.AffairFilter</filter-class>
+  </filter>
+  <!-- 还没配置事务过滤页面 -->
+  <filter-mapping>
+    <filter-name>AffairFilter</filter-name>
+    <url-pattern></url-pattern>
+  </filter-mapping>
+  <servlet>
+    <servlet-name>Log4JInitServlet</servlet-name>
+    <servlet-class>util.Log4JInitServlet</servlet-class>
+    <init-param>
+      <param-name>log4j-properties-location</param-name>
+      <param-value>/WEB-INF/classes/log4j.properties</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet>
+    <servlet-name>loginServlet</servlet-name>
+    <servlet-class>UI.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>loginServlet</servlet-name>
+    <url-pattern>/doLogin</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>doRegister</servlet-name>
+    <servlet-class>UI.servlet.DoRegServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>doRegister</servlet-name>
+    <url-pattern>/doRegister</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>addSubject</servlet-name>
+    <servlet-class>UI.servlet.AddSubjectServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>addSubject</servlet-name>
+    <url-pattern>/addSubject</url-pattern>
+  </servlet-mapping>
+  
+  
+  <error-page>
+    <error-code>404</error-code>
+    <location>/error/404.jsp</location>
+  </error-page>
+  <error-page>
+    <error-code>500</error-code>
+    <location>/error/500.jsp</location>
+  </error-page>
+</web-app>
